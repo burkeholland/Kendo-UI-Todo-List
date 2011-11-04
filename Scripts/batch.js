@@ -21,15 +21,30 @@
                     read: {
                         url: pub.root("Home/Read")
                     },
+                    parameterMap: function (data, type) {
+                        if (type == "destroy" || type == "create") {
+                            var items = {};
+
+                            $.each(data.models, function (index, item) {
+                                for (var key in item) {
+                                    items["[" + index + "]" + "." + key] = item[key];
+                                }
+                            });
+
+                            return items;
+                        }
+                    },
                     create: {
-                        url: pub.root("Home/Create"),
+                        url: pub.root("Home/CreateBatch"),
                         type: "POST"
                     },
                     destroy: {
-                        url: pub.root("Home/Delete"),
-                        type: "POST"
+                        url: pub.root("Home/DeleteBatch"),
+                        type: "POST",
+                        traditional: true
                     }
                 },
+                batch: true,
                 schema: {
                     model: Item
                 },

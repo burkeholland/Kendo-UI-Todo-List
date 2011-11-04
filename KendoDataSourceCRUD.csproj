@@ -88,10 +88,12 @@
     <Content Include="Content\Templates\_todoItem.tmpl.html" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\batch.js" />
     <Content Include="Scripts\events.js" />
     <Content Include="Scripts\index.js" />
     <Content Include="Scripts\kendo.all.min.js" />
     <Content Include="Scripts\templateLoader.js" />
+    <Content Include="Views\Home\Content.cshtml" />
     <None Include="Views\Templates\Todo.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

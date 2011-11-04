@@ -9,8 +9,17 @@ namespace KendoDataSourceCRUD.Controllers
     [OutputCache(NoStore = true, Duration = 0, VaryByParam = "*")] 
     public class HomeController : Controller
     {
-        public ActionResult Index()
-        {
+        public ActionResult Index() {
+            SetItems();
+            return View();
+        }
+
+        public ActionResult Batch() {
+            SetItems();
+            return View();
+        }
+
+        private void SetItems() {
             var items = new List<Item>();
             items.Add(new Item { ID = 1, Name = "Download Kendo UI" });
             items.Add(new Item { ID = 2, Name = "Build Amazing Apps" });
@@ -18,9 +27,8 @@ namespace KendoDataSourceCRUD.Controllers
             if (Session["Items"] == null) {
                 Session.Add("Items", items);
             }
-
-            return View();
         }
+
 
         private IList<Item> Items() {
             return (IList<Item>)Session["Items"];
@@ -35,7 +43,7 @@ namespace KendoDataSourceCRUD.Controllers
             return this.Json(Items(), JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult Create(IEnumerable<Item> item) {
+        public JsonResult CreateBatch(IEnumerable<Item> item) {
             var items = Items();
             var newItem = new Item { Name = item.ElementAt(0).Name, ID = 1 };
 
@@ -53,7 +61,26 @@ namespace KendoDataSourceCRUD.Controllers
             return this.Json(newItem);
         }
 
-        public JsonResult Delete(IEnumerable<Item> itemsToDelete) {
+        public JsonResult Create(string name) {
+            var items = new List<Item>();
+            items.Add(new Item { Name = name, ID = 1 });
+            return CreateBatch(items);
+        }
+
+        public JsonResult Delete(Item item) {
+            var items = Items();
+            var itemToDelete = (from i in items
+                                where i.ID == item.ID
+                                select i).FirstOrDefault();
+
+            if (itemToDelete != null) items.Remove(itemToDelete);
+
+            SaveItems(items);
+
+            return this.Json(items);
+        }
+
+        public JsonResult DeleteBatch(IEnumerable<Item> itemsToDelete) {
             
             var items = Items();
 
