@@ -36,8 +36,7 @@
                     },
                     create: {
                         url: pub.root("Home/Create"),
-                        type: "POST",
-                        tranditional: true
+                        type: "POST"
                     },
                     destroy: {
                         url: pub.root("Home/Delete"),
