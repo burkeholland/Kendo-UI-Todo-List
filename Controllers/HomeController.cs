@@ -6,6 +6,7 @@ using System;
 
 namespace KendoDataSourceCRUD.Controllers
 {
+    [OutputCache(NoStore = true, Duration = 0, VaryByParam = "*")] 
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -29,7 +30,6 @@ namespace KendoDataSourceCRUD.Controllers
             Session["Items"] = items;
         }
 
-        [OutputCache(NoStore = true, Duration = 0, VaryByParam = "*")] 
         public JsonResult Read()
         {
             return this.Json(Items(), JsonRequestBehavior.AllowGet);

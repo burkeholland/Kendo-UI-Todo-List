@@ -3,3 +3,10 @@ C:\Users\Administrator\Desktop\KendoDataSourceCRUD\KendoDataSourceCRUD\bin\Kendo
 C:\Users\Administrator\Desktop\KendoDataSourceCRUD\KendoDataSourceCRUD\obj\Release\ResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\KendoDataSourceCRUD\KendoDataSourceCRUD\obj\Release\KendoDataSourceCRUD.dll
 C:\Users\Administrator\Desktop\KendoDataSourceCRUD\KendoDataSourceCRUD\obj\Release\KendoDataSourceCRUD.pdb
+C:\Projects\KendoDataSourceCRUD\KendoDataSourceCRUD\bin\KendoDataSourceCRUD.dll
+C:\Projects\KendoDataSourceCRUD\KendoDataSourceCRUD\bin\KendoDataSourceCRUD.pdb
+C:\Projects\KendoDataSourceCRUD\KendoDataSourceCRUD\bin\System.Web.Mvc.dll
+C:\Projects\KendoDataSourceCRUD\KendoDataSourceCRUD\bin\System.Web.Mvc.xml
+C:\Projects\KendoDataSourceCRUD\KendoDataSourceCRUD\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\KendoDataSourceCRUD\KendoDataSourceCRUD\obj\Release\KendoDataSourceCRUD.dll
+C:\Projects\KendoDataSourceCRUD\KendoDataSourceCRUD\obj\Release\KendoDataSourceCRUD.pdb
