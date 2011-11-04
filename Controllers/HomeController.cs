@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Web.Mvc;
 using KendoDataSourceCRUD.Models;
+using System;
 
 namespace KendoDataSourceCRUD.Controllers
 {
@@ -20,55 +21,53 @@ namespace KendoDataSourceCRUD.Controllers
             return View();
         }
 
-        public ActionResult Batch()
-        {
-            return View();
-        }
-
-        public ActionResult Template() {
-            return View("Templates/_todoItem.tmpl.html");
-        }
-
-        public IList<Item> Items() {
+        private IList<Item> Items() {
             return (IList<Item>)Session["Items"];
         }
-				 
+
+        private void SaveItems(IList<Item> items) {
+            Session["Items"] = items;
+        }
+
+        [OutputCache(NoStore = true, Duration = 0, VaryByParam = "*")] 
         public JsonResult Read()
         {
             return this.Json(Items(), JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult Json() {
-            return this.Json("you are here", JsonRequestBehavior.AllowGet);
-        }
-
-        public JsonResult Create(string name) {
+        public JsonResult Create(IEnumerable<Item> item) {
             var items = Items();
-            var item = new Item { Name = name, ID = 1 };
+            var newItem = new Item { Name = item.ElementAt(0).Name, ID = 1 };
 
             if (items.Count > 0) {
                 var nextID = (from i in items
                           select i.ID).Max() + 1;
 
-                item.ID = nextID;
+                newItem.ID = nextID;
             }
 
-            items.Add(item);
+            items.Add(newItem);
 
-            Session["Items"] = items;
+            SaveItems(items);
 
-            return this.Json(item, JsonRequestBehavior.AllowGet);
+            return this.Json(newItem);
         }
 
-        public JsonResult Delete(Item item) {
-            var items = Items();
-            var itemToDelete = (from i in items
-                                where i.ID == item.ID
-                                select i).FirstOrDefault();
-
-            if (item != null) items.Remove(itemToDelete);
+        public JsonResult Delete(IEnumerable<Item> itemsToDelete) {
             
-            return this.Json("");
+            var items = Items();
+
+            foreach(var item in itemsToDelete) {
+                var itemToDelete = (from d in items
+                                   where d.ID == item.ID
+                                   select d).FirstOrDefault();
+
+                if (itemToDelete != null) items.Remove(itemToDelete);
+            }
+
+            SaveItems(items);
+
+            return this.Json(items);
         }
     }
 }

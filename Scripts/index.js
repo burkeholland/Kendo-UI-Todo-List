@@ -21,8 +21,8 @@
                     read: {
                         url: pub.root("Home/Read")
                     },
-                    dialect: function (data) {
-                        if (type == "create") {
+                    parameterMap: function (data, type) {
+                        if (type == "destroy" || type == "create") {
                             var items = {};
 
                             $.each(data.models, function (index, item) {
@@ -36,7 +36,8 @@
                     },
                     create: {
                         url: pub.root("Home/Create"),
-                        type: "POST"
+                        type: "POST",
+                        tranditional: true
                     },
                     destroy: {
                         url: pub.root("Home/Delete"),
@@ -44,13 +45,14 @@
                         traditional: true
                     }
                 },
+                batch: true,
                 schema: {
                     model: Item
                 },
                 change: function () {
                     $("#items").html(kendo.render(template, this.view()));
                 }
-            });                
+            });
 
             // initialize the events which are bound to the button click events
             events.root = pub.root;

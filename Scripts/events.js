@@ -18,11 +18,13 @@
             if ($.trim($("#new-item").val()) != "") {
 
                 app.dataSource.add({ Name: $("#new-item").val() });
+
                 app.dataSource.sync();
 
-                $("#new-item").val("");
+                // why do i need a separate read here?
+               app.dataSource.read();
 
-                app.dataSource.read();
+                $("#new-item").val("");
             }
         },
         "delete": function (event) {
