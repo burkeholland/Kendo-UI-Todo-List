@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\KendoDataSourceCRUD\KendoDataSourceCRUD\bin\KendoDataSourceCRUD.dll
+C:\Users\Administrator\Desktop\KendoDataSourceCRUD\KendoDataSourceCRUD\bin\KendoDataSourceCRUD.pdb
+C:\Users\Administrator\Desktop\KendoDataSourceCRUD\KendoDataSourceCRUD\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\KendoDataSourceCRUD\KendoDataSourceCRUD\obj\Release\KendoDataSourceCRUD.dll
+C:\Users\Administrator\Desktop\KendoDataSourceCRUD\KendoDataSourceCRUD\obj\Release\KendoDataSourceCRUD.pdb
