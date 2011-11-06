@@ -1,16 +1,21 @@
-#content 
+body 
 {
     width: 100%;
-    margin-top: 20px;
+    height: 100%;
 }
 
-article 
+header 
 {
+    margin-bottom: 10px;
+}
+
+#content 
+{
+    width: 700px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 700px;
 }
-
 
 dl dt { 
 	float:left;
@@ -80,4 +85,12 @@ dl dd {
     margin-left: 19px;
     height: 35px;
     margin-bottom: 5px;
+}
+
+#saveDeletes
+{
+    -webkit-transition: opacity 1s ease-out; 
+    -moz-transition: opacity 1s ease-out;
+    -o-transition: opacity 1s ease-out;
+    opacity: 0; 
 }

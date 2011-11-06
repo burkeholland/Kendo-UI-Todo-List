@@ -22,7 +22,7 @@
                 app.dataSource.sync();
 
                 // why do i need a separate read here?
-               app.dataSource.read();
+                app.dataSource.read();
 
                 $("#new-item").val("");
             }
@@ -38,11 +38,19 @@
             console.log("item: " + item.data("id"));
 
             app.dataSource.remove(itemToDestroy);
+
+            if (app.mode === 'single') app.dataSource.sync();
         },
         "saveAll": function (event) {
             console.log("save all");
 
             app.dataSource.sync();
+        },
+        "singleUpdateMode": function (event) {
+            window.location = app.root("Home");
+        },
+        "batchUpdateMode": function (event) {
+            window.location = app.root("Home/Batch");
         }
     }
 

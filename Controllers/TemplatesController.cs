@@ -15,11 +15,5 @@ namespace KendoDataSourceCRUD.Controllers
         {
             return View("Todo");
         }
-
-        public ContentResult Index() {
-            var text = new ContentResult();
-            text.Content = "TEmplates Controller";
-            return text;
-        }
     }
 }

@@ -11,12 +11,20 @@ namespace KendoDataSourceCRUD.Controllers
     {
         public ActionResult Index() {
             SetItems();
+            
+            ViewData.Add("mode", "single");
+            ViewData.Add("title", "Single Update Mode");
+            
             return View();
         }
 
         public ActionResult Batch() {
             SetItems();
-            return View();
+            
+            ViewData.Add("mode", "batch");
+            ViewData.Add("title", "Batch Update Mode");
+
+            return View("Index");
         }
 
         private void SetItems() {

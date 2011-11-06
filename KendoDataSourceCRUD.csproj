@@ -66,7 +66,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="JsonpResult.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -85,15 +84,13 @@
     <Content Include="Content\Kendo\Kendo\sprite-vertical.png" />
     <Content Include="Content\Kendo\Kendo\sprite.png" />
     <Content Include="Content\screen.css" />
-    <Content Include="Content\Templates\_todoItem.tmpl.html" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\batch.js" />
     <Content Include="Scripts\events.js" />
-    <Content Include="Scripts\index.js" />
+    <Content Include="Scripts\single.js" />
     <Content Include="Scripts\kendo.all.min.js" />
     <Content Include="Scripts\templateLoader.js" />
-    <Content Include="Views\Home\Content.cshtml" />
     <None Include="Views\Templates\Todo.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -112,9 +109,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Home\Batch.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

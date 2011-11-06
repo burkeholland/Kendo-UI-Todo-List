@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>@ViewBag.Title</title>
+    <title>Kendo Todo List</title>
     
     <link href="@Url.Content("~/Content/Kendo/kendo.common.min.css")" rel="Stylesheet" type="text/css" />
     <link href="@Url.Content("~/Content/Kendo/kendo.kendo.min.css")" rel="Stylesheet" type="text/css" />
@@ -11,14 +11,18 @@
     <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script src="@Url.Content("~/Scripts/kendo.all.min.js")" />
+    <script src="@Url.Content("~/Scripts/kendo.all.min.js")"></script>
 </head>
 
 <body>
-    <script>
-        $(function () {
-       }); 
-    </script>
-    @RenderBody()
+    <div id="content">
+        <header>
+            <button id="single-update-mode" class='k-button' data-event="singleUpdateMode">Single Update Mode</button>
+            <button id="batch-update-mode" class='k-button' data-event="batchUpdateMode">Batch Update Mode</button>
+        </header>
+        @RenderBody()
+        <footer>
+        </footer>
+    </div>
 </body>
 </html>

@@ -4,7 +4,7 @@
     pub.root;
     pub.dataSource;
     pub.template;
-    pub.mode = "batch";
+    pub.mode = "single";
 
     // public functions
     pub.init = function () {
@@ -22,30 +22,15 @@
                     read: {
                         url: pub.root("Home/Read")
                     },
-                    parameterMap: function (data, type) {
-                        if (type == "destroy" || type == "create") {
-                            var items = {};
-
-                            $.each(data.models, function (index, item) {
-                                for (var key in item) {
-                                    items["[" + index + "]" + "." + key] = item[key];
-                                }
-                            });
-
-                            return items;
-                        }
-                    },
                     create: {
-                        url: pub.root("Home/CreateBatch"),
+                        url: pub.root("Home/Create"),
                         type: "POST"
                     },
                     destroy: {
-                        url: pub.root("Home/DeleteBatch"),
-                        type: "POST",
-                        traditional: true
+                        url: pub.root("Home/Delete"),
+                        type: "POST"
                     }
                 },
-                batch: true,
                 schema: {
                     model: Item
                 },
