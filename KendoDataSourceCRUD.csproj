@@ -89,6 +89,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\batch.js" />
     <Content Include="Scripts\events.js" />
+    <Content Include="Scripts\modernizr.js" />
     <Content Include="Scripts\single.js" />
     <Content Include="Scripts\kendo.all.min.js" />
     <Content Include="Scripts\templateLoader.js" />
