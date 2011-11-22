@@ -17,3 +17,17 @@ C:\Projects\KendoDataSourceCRUD\KendoDataSourceCRUD\bin\System.Web.Mvc.xml
 C:\Projects\KendoDataSourceCRUD\KendoDataSourceCRUD\obj\Debug\ResolveAssemblyReference.cache
 C:\Projects\KendoDataSourceCRUD\KendoDataSourceCRUD\obj\Debug\KendoDataSourceCRUD.dll
 C:\Projects\KendoDataSourceCRUD\KendoDataSourceCRUD\obj\Debug\KendoDataSourceCRUD.pdb
+C:\Users\Burke\Downloads\KendoTodo\KendoTodo\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Burke\Downloads\KendoTodo\KendoTodo\obj\Debug\KendoDataSourceCRUD.dll
+C:\Users\Burke\Downloads\KendoTodo\KendoTodo\obj\Debug\KendoDataSourceCRUD.pdb
+C:\Users\Burke\Downloads\KendoTodo\KendoTodo\bin\KendoDataSourceCRUD.dll
+C:\Users\Burke\Downloads\KendoTodo\KendoTodo\bin\KendoDataSourceCRUD.pdb
+C:\Users\Burke\Downloads\KendoTodo\KendoTodo\bin\System.Web.Mvc.dll
+C:\Users\Burke\Downloads\KendoTodo\KendoTodo\bin\System.Web.Mvc.xml
+C:\Projects\KendoTodo\KendoTodo\bin\KendoDataSourceCRUD.dll
+C:\Projects\KendoTodo\KendoTodo\bin\KendoDataSourceCRUD.pdb
+C:\Projects\KendoTodo\KendoTodo\bin\System.Web.Mvc.dll
+C:\Projects\KendoTodo\KendoTodo\bin\System.Web.Mvc.xml
+C:\Projects\KendoTodo\KendoTodo\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\KendoTodo\KendoTodo\obj\Debug\KendoDataSourceCRUD.dll
+C:\Projects\KendoTodo\KendoTodo\obj\Debug\KendoDataSourceCRUD.pdb

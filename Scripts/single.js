@@ -29,6 +29,10 @@
                     destroy: {
                         url: pub.root("Home/Delete"),
                         type: "POST"
+                    },
+                    update: {
+                        url: pub.root("Home/Update"),
+                        type: "POST"
                     }
                 },
                 schema: {

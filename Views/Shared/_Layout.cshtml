@@ -19,10 +19,30 @@
         <header>
             <button id="single-update-mode" class='k-button' data-event="singleUpdateMode">Single Update Mode</button>
             <button id="batch-update-mode" class='k-button' data-event="batchUpdateMode">Batch Update Mode</button>
+            <img src="@Url.Content("~/Content/Images/kendo-dude.png")" />
         </header>
         @RenderBody()
         <footer>
         </footer>
     </div>
+    <script>
+
+        $(function () {
+
+            // create a function for getting the root path 
+            root = function (url) {
+                var path = '@Request.ApplicationPath'
+                if (path != '/') path = path + '/'
+                return path + url;
+            }
+
+            app.root = root;
+            app.init();
+
+            if (app.mode === "batch") $("#saveDeletes").css("opacity", "1");
+
+        });
+
+    </script>
 </body>
 </html>

@@ -23,7 +23,7 @@
                         url: pub.root("Home/Read")
                     },
                     parameterMap: function (data, type) {
-                        if (type == "destroy" || type == "create") {
+                        if (type != "read") {
                             var items = {};
 
                             $.each(data.models, function (index, item) {
@@ -41,6 +41,11 @@
                     },
                     destroy: {
                         url: pub.root("Home/DeleteBatch"),
+                        type: "POST",
+                        traditional: true
+                    },
+                    update: {
+                        url: pub.root("Home/UpdateBatch"),
                         type: "POST",
                         traditional: true
                     }
