@@ -14,7 +14,7 @@ namespace KendoDataSourceCRUD.Controllers
             
             ViewData.Add("mode", "single");
             ViewData.Add("title", "Single Update Mode");
-            ViewData.Add("description", "In Single Update mode, all actions are sent to the server as individual requests as soon as they are initiated in the UI.  The UI reflects the changes made on the server.");
+            // ViewData.Add("description", "In Single Update mode, all actions are sent to the server as individual requests as soon as they are initiated in the UI.  The UI reflects the changes made on the server.");
             
             return View();
         }
@@ -24,7 +24,7 @@ namespace KendoDataSourceCRUD.Controllers
             
             ViewData.Add("mode", "batch");
             ViewData.Add("title", "Batch Update Mode");
-            ViewData.Add("description", "In Batch Update mode, new items are created on the server, but edit's and delete's are made to the model and are not submitted to the server until the 'Save Changes' button is clicked.  Then they are sent in batches instead of individual calls.");
+            // ViewData.Add("description", "In Batch Update mode, new items are created on the server, but edit's and delete's are made to the model and are not submitted to the server until the 'Save Changes' button is clicked.  Then they are sent in batches instead of individual calls.");
 
             return View("Index");
         }
