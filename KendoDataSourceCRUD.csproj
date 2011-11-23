@@ -95,6 +95,7 @@
     <Content Include="Scripts\kendo.all.min.js" />
     <Content Include="Scripts\templateLoader.js" />
     <Content Include="Views\Home\ViewPage1.cshtml" />
+    <Content Include="Content\Template\Todo.htm" />
     <None Include="Views\Templates\Todo.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

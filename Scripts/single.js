@@ -53,7 +53,7 @@
             $(document).trigger("TODO_APP_READY");
         });
 
-        tl.loadExtTemplate(pub.root("Templates/Todo"));
+        tl.loadExtTemplate(pub.root("Content/Template/Todo.htm"));
     };
 
     return pub;
