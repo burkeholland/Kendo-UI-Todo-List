@@ -1,7 +1,7 @@
 ﻿var templateLoader = (function ($, host) {
     //Loads external templates from path and injects in to page DOM
     return {
-        loadExtTemplate: function (path) {
+        loadExtTemplate: function (path, event) {
             var tmplLoader = $.get(path)
                 .success(function (result) {
                     //Add templates to DOM
@@ -12,7 +12,7 @@
                 })
 
             tmplLoader.complete(function () {
-                $(host).trigger("TODO_ITEM_TEMPLATE_LOADED", [path]);
+                $(host).trigger(event, [path]);
             });
         }
     };

@@ -17,6 +17,31 @@ header
     margin-right: auto;
 }
 
+.log 
+{
+    padding-left: 20px;
+    height: 200px;
+}
+
+.log li 
+{
+    margin-left: 20px;
+    list-style-type: none;
+}
+
+#panelbar 
+{
+    margin-bottom: 20px;
+}
+
+footer 
+{
+    width: 700px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 dl dt { 
 	float:left;
 	font-weight:bold;   

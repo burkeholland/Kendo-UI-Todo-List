@@ -69,7 +69,31 @@
             $(document).trigger("TODO_APP_READY");
         });
 
-        tl.loadExtTemplate(pub.root("Templates/Todo"));
+        $(document).bind("LOG_ENTRY_TEMPLATE_LOADED", function (e, data) {
+
+            // attach event listeners for all ajax requests
+            $("#log").ajaxSend(function (event, xhr, options) {
+                logEntry(options.url, "client", options.data, options.type, this);
+            });
+
+            $("#log").ajaxComplete(function (event, xhr, options) {
+                logEntry(options.url, "server", xhr.responseText, options.type, this);
+            });
+
+            function logEntry(url, sender, data, method, el) {
+                var logEntry = kendo.template($("#logEntryTemplate").html());
+
+                $(el).append(logEntry({
+                    url: url,
+                    sender: sender,
+                    data: unescape(data),
+                    method: method
+                }));
+            }
+        });
+
+        tl.loadExtTemplate(pub.root("Content/Template/Todo.htm"), "TODO_ITEM_TEMPLATE_LOADED");
+        tl.loadExtTemplate(pub.root("Content/Template/LogEntry.htm"), "LOG_ENTRY_TEMPLATE_LOADED");
     };
 
     return pub;

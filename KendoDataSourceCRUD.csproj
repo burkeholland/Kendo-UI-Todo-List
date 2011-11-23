@@ -86,6 +86,7 @@
     <Content Include="Content\Kendo\Kendo\sprite-vertical.png" />
     <Content Include="Content\Kendo\Kendo\sprite.png" />
     <Content Include="Content\screen.css" />
+    <Content Include="Content\Template\LogEntry.htm" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\batch.js" />
@@ -96,7 +97,6 @@
     <Content Include="Scripts\templateLoader.js" />
     <Content Include="Views\Home\ViewPage1.cshtml" />
     <Content Include="Content\Template\Todo.htm" />
-    <None Include="Views\Templates\Todo.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
