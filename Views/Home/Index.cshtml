@@ -1,14 +1,16 @@
-﻿<script src="@Url.Content("~/Scripts/templateLoader.js")"></script>
-<script src="@Url.Content("~/Scripts/" + @ViewData["mode"] + ".js")"></script>
+﻿@model KendoDataSourceCRUD.Models.Meta
+
+<script src="@Url.Content("~/Scripts/templateLoader.js")"></script>
+<script src="@Url.Content("~/Scripts/" + @Model.JsName)"></script>
 <script src="@Url.Content("~/Scripts/events.js")"></script>
 
     <div class="description">
-        @ViewData["description"]
+        @Model.Description
     </div>
     <br />
     <div>
         <div id="title">
-            <h2>Todo List - @ViewData["title"]</h2>
+            <h2>Todo List - @Model.Title</h2>
             <button id="saveDeletes" class="k-button" data-event="saveAll">Save Changes</button>
         </div>
         <hr />

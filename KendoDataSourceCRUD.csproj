@@ -67,6 +67,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Meta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +94,7 @@
     <Content Include="Scripts\single.js" />
     <Content Include="Scripts\kendo.all.min.js" />
     <Content Include="Scripts\templateLoader.js" />
+    <Content Include="Views\Home\ViewPage1.cshtml" />
     <None Include="Views\Templates\Todo.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
