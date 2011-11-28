@@ -51,6 +51,7 @@
             item.find(".edit").hide();
             item.find(".delete").hide();
             item.find(".cancel").show();
+            item.find(".save").show();
         },
         "delete": function (event) {
             console.log("delete");
@@ -88,6 +89,7 @@
             item.find(".delete").show();
             item.find(".edit").show();
             item.find(".cancel").hide();
+            item.find(".save").hide();
         },
         "cancelEdit": function (event) {
             console.log("cancel edit");
@@ -97,6 +99,7 @@
             item.find(".delete").show();
             item.find(".edit").show();
             item.find(".cancel").hide();
+            item.find(".save").hide();
 
             h3 = item.find("h3").show();
             item.find("input").val(h3.text()).hide();

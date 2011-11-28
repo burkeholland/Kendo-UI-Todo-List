@@ -124,7 +124,7 @@ dl dd {
 .name input 
 {
     display: none;
-    width: 545px;
+    width: 500px;
 }
 
 li .cancel 
@@ -136,6 +136,12 @@ li .cancel
 li .delete
 {
     float: right;
+}
+
+li .save 
+{
+    float: right;
+    display: none;
 }
 
 .description 
