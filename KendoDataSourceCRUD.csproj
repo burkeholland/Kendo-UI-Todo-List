@@ -99,6 +99,9 @@
     <Content Include="Scripts\templateLoader.js" />
     <Content Include="Views\Home\ViewPage1.cshtml" />
     <Content Include="Content\Template\Todo.htm" />
+    <Content Include="Views\Shared\Error.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
