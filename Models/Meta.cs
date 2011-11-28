@@ -8,7 +8,7 @@ namespace KendoDataSourceCRUD.Models
     public class Meta
     {
         public string Title { get; set; }
-        public string JsName { get; set; }
         public string Description { get; set; }
+        public string Mode { get; set; }
     }
 }

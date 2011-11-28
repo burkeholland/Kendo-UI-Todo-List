@@ -1,24 +1,47 @@
 ﻿@model KendoDataSourceCRUD.Models.Meta
 
-<script src="@Url.Content("~/Scripts/templateLoader.js")"></script>
-<script src="@Url.Content("~/Scripts/" + @Model.JsName)"></script>
-<script src="@Url.Content("~/Scripts/events.js")"></script>
-
-    <div class="description">
-        @Model.Description
-    </div>
-    <br />
-    <div>
-        <div id="title">
-            <h2>Todo List - @Model.Title</h2>
-            <button id="saveDeletes" class="k-button" data-event="saveAll">Save Changes</button>
-        </div>
-        <hr />
-        <input type="text" id="new-item" class="title" />
-        <button id="addItem" class="k-button add-button title" data-event="addItem">Add</button>
-        <ul id="items"></ul>
-    </div>
+<div class="description">
+    @Model.Description
 </div>
+<br />
+<div>
+    <div id="title">
+        <h2>Todo List - @Model.Title</h2>
+        <button id="saveDeletes" class="k-button" data-event="saveAll">Save Changes</button>
+    </div>
+    <hr />
+    <input type="text" id="new-item" class="title" />
+    <button id="addItem" class="k-button add-button title" data-event="addItem">Add</button>
+    <ul id="items"></ul>
+</div>
+
+<script>
+
+    $(function () {
+
+        // create a function for getting the root path 
+        root = function (url) {
+            var path = '@Request.ApplicationPath'
+            if (path != '/') path = path + '/'
+            return path + url;
+        }
+
+        app.root = root;
+        app.mode = "@Model.Mode";
+        app.init();
+
+        if (app.mode === "batch") $("#saveDeletes").css("opacity", "1");
+
+        $("#panelbar").kendoPanelBar({ height: 200 });
+
+    });
+
+</script>
+
+<script src="@Url.Content("~/Scripts/templateLoader.js")"></script>
+<script src="@Url.Content("~/Scripts/app.js")"></script>
+<script src="@Url.Content("~/Scripts/" + @Model.Mode + "DS.js")"></script>
+<script src="@Url.Content("~/Scripts/events.js")"></script>
 
 
 

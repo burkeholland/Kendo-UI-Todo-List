@@ -29,30 +29,7 @@
             <img src="@Url.Content("~/Content/Images/kendo-dude.png")" />
         </header>
     @RenderBody()
-    <footer>
-          
-        </footer>
+    <footer></footer>
     </div>
-    <script>
-
-        $(function () {
-
-            // create a function for getting the root path 
-            root = function (url) {
-                var path = '@Request.ApplicationPath'
-                if (path != '/') path = path + '/'
-                return path + url;
-            }
-
-            app.root = root;
-            app.init();
-
-            if (app.mode === "batch") $("#saveDeletes").css("opacity", "1");
-
-            $("#panelbar").kendoPanelBar({ height: 200 });
-
-        });
-
-    </script>
 </body>
 </html>
