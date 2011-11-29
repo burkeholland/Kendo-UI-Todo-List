@@ -91,6 +91,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\batchDS.js" />
+    <Content Include="Scripts\consoleFix.js" />
     <Content Include="Scripts\events.js" />
     <Content Include="Scripts\modernizr.js" />
     <Content Include="Scripts\app.js" />

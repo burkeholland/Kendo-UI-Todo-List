@@ -119,4 +119,4 @@
 
     return pub;
 
-})(jQuery, kendo, console);
+})(jQuery, kendo, consoleFix);

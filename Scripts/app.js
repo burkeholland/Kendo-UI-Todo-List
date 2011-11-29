@@ -67,5 +67,5 @@
 
     return pub;
 
-})(jQuery, kendo, console, templateLoader);
+})(jQuery, kendo, consoleFix, templateLoader);
         
