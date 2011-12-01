@@ -90,15 +90,14 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\batchDS.js" />
+    <Content Include="Scripts\Modules\batchDS.js" />
     <Content Include="Scripts\consoleFix.js" />
-    <Content Include="Scripts\events.js" />
-    <Content Include="Scripts\modernizr.js" />
-    <Content Include="Scripts\app.js" />
-    <Content Include="Scripts\kendo.all.min.js" />
-    <Content Include="Scripts\singleDS.js" />
-    <Content Include="Scripts\templateLoader.js" />
-    <Content Include="Views\Home\ViewPage1.cshtml" />
+    <Content Include="Scripts\Modules\events.js" />
+    <Content Include="Scripts\Libraries\modernizr.js" />
+    <Content Include="Scripts\Core\app.js" />
+    <Content Include="Scripts\Libraries\kendo.all.min.js" />
+    <Content Include="Scripts\Modules\singleDS.js" />
+    <Content Include="Scripts\Modules\templateLoader.js" />
     <Content Include="Content\Template\Todo.htm" />
     <Content Include="Views\Shared\Error.cshtml">
       <SubType>Code</SubType>
@@ -122,7 +121,9 @@
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Scripts\Facade\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -138,9 +139,9 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>32100</DevelopmentServerPort>
+          <DevelopmentServerPort>1550</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost/KendoDataSourceCRUD</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

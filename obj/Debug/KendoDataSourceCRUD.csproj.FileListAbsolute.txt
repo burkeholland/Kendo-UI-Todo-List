@@ -31,3 +31,10 @@ C:\Projects\KendoTodo\KendoTodo\bin\System.Web.Mvc.xml
 C:\Projects\KendoTodo\KendoTodo\obj\Debug\ResolveAssemblyReference.cache
 C:\Projects\KendoTodo\KendoTodo\obj\Debug\KendoDataSourceCRUD.dll
 C:\Projects\KendoTodo\KendoTodo\obj\Debug\KendoDataSourceCRUD.pdb
+C:\Projects\KendoTodo\bin\KendoDataSourceCRUD.dll
+C:\Projects\KendoTodo\bin\KendoDataSourceCRUD.pdb
+C:\Projects\KendoTodo\bin\System.Web.Mvc.dll
+C:\Projects\KendoTodo\bin\System.Web.Mvc.xml
+C:\Projects\KendoTodo\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\KendoTodo\obj\Debug\KendoDataSourceCRUD.dll
+C:\Projects\KendoTodo\obj\Debug\KendoDataSourceCRUD.pdb
